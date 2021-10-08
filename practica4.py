@@ -44,8 +44,15 @@ if(opcion== "y"):
 		lista[indice] = int(elemento)
 
 
-	print(lista)
-
 else:
-	print("Dame el rango de valores (lim inferior, limite superior) (1,7)?")
-	
+	print("Dame el rango de valores (lim inferior, limite superior) (1,7)?", end="")
+	limite_inferior, limite_superior = input().split(',')
+	limite_inferior = int(limite_inferior)
+	limite_superior = int(limite_superior)
+
+	lista = [x for x in range(limite_inferior, limite_superior+1)]
+
+print(lista)
+
+conjunto = set(lista)
+print(conjunto)
