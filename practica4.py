@@ -14,9 +14,9 @@ if(opcion== "y"):
 	print("Dame el listado de numerados separados por una coma ',' Ejemplo: 1,2,5,7?", end="")
 	lista = input()
 	
-	#lista = [elemento for l in lista.split(",") if elemento: int(elemento)]
+	lista = [int(elemento) for elemento in lista.split(",")]
 
-	lista = lista.split(',')
+	#lista = lista.split(',')
 	
 	""" --Primer alternativa
 	lista2 = list()
@@ -40,8 +40,8 @@ if(opcion== "y"):
 
 	
 	#Tercera alternativa
-	for indice, elemento in enumerate(lista):
-		lista[indice] = int(elemento)
+	#for indice, elemento in enumerate(lista):
+	#	lista[indice] = int(elemento)
 
 
 else:
